@@ -1,17 +1,8 @@
-<div class="navbar navbar-inverse">
-	<div class="navbar-inner">
-		<div class="container-fluid">
-			<a href="#" class="brand">{literal}{Music4Dancers}{/literal}</a>
-			<div class="nav-collapse collapse">
-				<ul class="nav">
-					{foreach from=$categories item=category}
-						<li><a href="/style/consult/{$category.Category_url}">{$category.Category_title}</a></li>
-					{/foreach}
-					<li><a href="/askme">{$lang.menu_ask}</a></li>
-					{$lang_block}
-				</ul>
-				
-			</div>
-		</div>
-	</div>
-</div>
+<nav class="site-header sticky-top py-1">
+	<div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2 d-none d-md-inline-block" href="#">BtxCases</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Actualités</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Catalogie</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Commande</a>
+      </div>
+</nav>
