@@ -1,41 +1,4 @@
-
-<h1>{$lang.news_title}</h1>
-
-{if !$news}
-	<p class="muted">{$lang.news_zero}</p>
-{elseif $news|@count == 1}
-	{foreach from=$news item=new}
-		<article>
-			<h3>{$new.news_title}</h3>
-			<blockquote>
-				<p>{$new.news_content}</p>
-				<small>{$new.news_date}</small>
-			</blockquote>
-		</article>
-	{/foreach}
-{else}
-	<div class="carousel slide">	
-	  <!-- Carousel items -->
-	  <div id="news_carousel" class="carousel-inner">
-	    {foreach from=$news item=new name=carousel}
-			<div class="item  {if $smarty.foreach.carousel.first}active{/if}">
-				<div class="carousel-content">
-					<h3>{$new.news_title}</h3>
-					<blockquote>
-						<p>{$new.news_content}</p>
-						<small>{$new.news_date|date_format:"%d/%m/%Y"}</small>
-					</blockquote>
-				</div>
-			</div>
-		{/foreach}
-	  </div>
-	  <!-- Carousel nav -->
-	  <a class="carousel-control left" href="#news_carousel" data-slide="prev">&lsaquo;</a>
-	  <a class="carousel-control right" href="#news_carousel" data-slide="next">&rsaquo;</a>
-	</div>
-{/if}
-
-
+<h1>BTXCases</h1>
 
 <script>
 
