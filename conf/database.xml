@@ -8,7 +8,7 @@
 	</database>
 	<database id="prod">
 		<host>db767723031.hosting-data.io</host>
-		<dbname>dbo767723031</dbname>
+		<dbname>db767723031</dbname>
 		<login>dbo767723031</login>
 		<pass>btxcases</pass>
 	</database>
