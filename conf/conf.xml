@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <confs>
-	<conf id="state"><value>dev</value><com>Influe sur la bdd.</com></conf>
+	<conf id="state"><value>prod</value><com>Influe sur la bdd.</com></conf>
 	<conf id="name"><value>BTXCases</value></conf>
 	<conf id="url"><value>http://btxcases.gaelcarre.fr</value></conf>
 	<conf id="default_index"><value/></conf>

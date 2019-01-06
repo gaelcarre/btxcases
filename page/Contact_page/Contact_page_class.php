@@ -11,10 +11,10 @@
 
 		public function getHead($sspage='',$param='')
 		{
-			$title = "Contact - Music For Dancers";
-			$description = 'Contactez moi soit par e-mail soit par courrier';
-			$keywords = 'Gaël CARRE,contact';
-			$canonical = 'http://www.gaelcarre.fr/contact.html';
+			$title = "Contact";
+			$description = '';
+			$keywords = '';
+			$canonical = 'http://btxcases.gaelcarre.fr';
 			return parent::constructHead($title,$description,$keywords,$canonical);
 		}
 
@@ -33,7 +33,7 @@
 				$headers .='Reply-To: '.$_POST['mail']."\n";
 				$resultat = mail(Site::getInstance()->getEmail(),
 				$resultat = mail("me@gaelcarre.fr",
-					"Contact MusicForDancers",
+					"Contact ",
 					$_POST['content'],$headers);
 			}
 
