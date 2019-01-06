@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<routes>
+	<route name="accueil">
+		<url> </url>
+		<page>Accueil</page>
+		<action>index</action>
+	</route>
+	<route name="logout">
+		<url>logout</url>
+		<page>Accueil</page>
+		<action>logout</action>
+	</route>
+	<route name="askme">
+		<url>askme</url>
+		<page>Accueil</page>
+		<action>ask</action>
+	</route>
+</routes>

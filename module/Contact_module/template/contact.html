@@ -1,0 +1,21 @@
+<article>
+	Gaël CARRE<br>
+	86 avenue du Général Leclerc<br>
+	72000 Le Mans
+</article>
+<article>
+	<div class="postit">
+		<form action="/contact/send.html" method="POST">
+		<table>
+			<caption>{$title} gaelcarre@gmail.com</caption>
+			<thead>
+				<tr><th scope="col"><input type="mail" name="mail" required placeholder="{$your}"></th></tr>
+				<tr><th scope="col"><textarea name="content" cols="30" rows="10"></textarea></th></tr>
+			</thead>
+			<tfoot>
+				<tr><th scope="col"><input type="submit" value="{$send}"></th></tr>
+			</tfoot>
+		</table>
+		</form>
+	</div>
+</article>

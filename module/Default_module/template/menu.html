@@ -1,0 +1,17 @@
+<div class="navbar navbar-inverse">
+	<div class="navbar-inner">
+		<div class="container-fluid">
+			<a href="#" class="brand">{literal}{Music4Dancers}{/literal}</a>
+			<div class="nav-collapse collapse">
+				<ul class="nav">
+					{foreach from=$categories item=category}
+						<li><a href="/style/consult/{$category.Category_url}">{$category.Category_title}</a></li>
+					{/foreach}
+					<li><a href="/askme">{$lang.menu_ask}</a></li>
+					{$lang_block}
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+</div>

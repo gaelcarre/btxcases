@@ -1,0 +1,11 @@
+<h1>Les prochains évenements</h1>
+<div id="evenement" class="grid_12">
+	{foreach from=$datas item=evt}
+		<div class="grid_6">
+			<h2>{$evt.evenement_title}</h2>
+			<p>{$evt.evenement_content}</p>
+		</div>
+	{/foreach}
+</div>
+
+

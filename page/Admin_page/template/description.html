@@ -1,0 +1,31 @@
+<h1>Gestion de la description</h1>
+<a href="admin">Accueil Admin</a>
+<p>C'est le texte que tu trouveras dans la page d'accueil sous le menu</p>
+<p>Pour des questions de facilité, remplaces tous les retours à la ligne par des &lt;br&gt;</p>
+<hr>
+{foreach from=$lang.lang_possible key=k item=v}
+	{assign var="description" value=$descriptions->getDescByLng($k)}
+	<div class="item-description">
+		<h2>Description en {$v}</h2>
+		<p class="read">
+			{if $description}
+				{$description->getContent()}
+			{else}
+				Pas de description en {$v}, le site risque un danger de plantage. 
+			{/if}
+		</p>
+		<div>
+			<div class="tools">
+				<i class="icon-pencil"></i><i class="icon-ok" data-id="{$description->getId()}"></i>
+			</div>
+			<div class="edit">
+				<textarea name="" id="" cols="60" rows="5">
+					{if $description}
+						{$description->getContent()}
+					{/if}
+				</textarea>
+			</div>
+		</div>
+		<hr>
+	</div>
+{/foreach}

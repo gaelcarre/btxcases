@@ -1,0 +1,25 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^musicfordancers.gaelcarre.fr$
+RewriteRule ^(.*) http://www.musicfordancers.gaelcarre.fr/$1 [QSA,L,R=301]
+
+
+# verifier que le fichier demandé n'existe pas
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# verifier que le dossier demandé n'existe pas
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# verifier que le fichier demandé n'est pas index.php 
+RewriteCond %{REQUEST_URI} !^index\.php$
+
+
+# Force tous le demande vers index.php
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+
+
+
+
+

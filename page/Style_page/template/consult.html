@@ -1,0 +1,26 @@
+<div class="row-fluid">
+	<div class="span6">
+		
+		<p>
+			<h1>{$title}</h1>
+			<p>{$style.Category_description}</p>
+		</p>
+		<p>
+			<img src="{$image}" alt="">
+		</p>
+	</div>
+	<div class="span6">
+		<h1>{$lang.style_tracks}</h1>
+		<div class="alert alert-info">{$lang.style_secure}</div>
+		{if !$cds}
+			<p class="muted">{$lang.cds_zero}</p>
+		{else}
+		<dl>
+			{foreach from=$cds item=cd}
+				<dt><a href="{$cd.CD_links}">{$cd.CD_title}</a></dt>
+				<dd>{$cd.CD_description}</dd>
+			{/foreach}
+		</dl>
+		{/if}
+	</div>
+</div>

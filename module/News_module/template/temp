@@ -1,0 +1,42 @@
+{literal}
+<script type="text/javascript" src="script/SudoSlider/js/jquery.sudoSlider.js"></script>
+<script type="text/javascript" >
+	$(document).ready(function(){   
+	   var sudoSlider = $('#slider').sudoSlider({
+			prevNext:false,
+			customLink: '.custom',
+			autowidth:false,
+			autoheight:false
+		});
+	   $('#slidemenu > ul >li').click(function(){
+	   		$('#slidemenu > ul >li').removeClass("active");
+	   		$(this).addClass("active");
+	   });
+	});
+</script>
+{/literal}
+<div style="position:relative;">
+    <div id="slider" class="grid_9 alpha">
+        <ul>                
+            {foreach from=$news item=new}
+				<li class="grid_12">
+					<h2>{$new.news_title}</h2>
+					<p>{$new.news_content}</p>
+				</li>
+			{/foreach}         
+        </ul>
+    </div>
+
+	<div id="slidemenu" class="grid_3 omega">
+		<ul>
+			{foreach from=$news item=new name=n}
+				<li class="custom {if $smarty.foreach.n.first} active{/if}" rel="{$smarty.foreach.n.iteration}">
+					<a href="#">{$new.news_title}</a>
+					<!-- <h2><a href="#">{$new.news_title}</a></h2> -->
+					<!-- <p style="display:none">{$new.news_content}</p> -->
+				</li>
+			{/foreach}
+			
+		</ul>
+	</div>
+</div>

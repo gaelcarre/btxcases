@@ -1,0 +1,37 @@
+<h1>{$lang.contact_title}</h1>
+{if $resultat}
+	<div class="alert alert-success">
+		{$lang.contact_success}
+	</div>
+{else}
+	{if $postsend}
+		<div class="alert alert-error">
+			{$lang.contact_error}
+		</div>
+	{/if}
+{/if}
+
+<form action="/contact" method="POST" class="form-horizontal">
+	<div class="control-group">
+		<label for="mail" class="control-label">{$lang.contact_your}</label>
+		<div class="controls">
+			<div class="input-prepend">
+				<span class="add-on">@</span>
+				<input type="text" name="mail" required class="input-xxlarge">
+			</div>
+		</div>
+	</div>
+	<div class="control-group">
+		<div class="controls">
+			<textarea name="content" class="input-xxlarge"></textarea>
+		</div>
+	</div>
+	<div class="control-group">
+		<div class="controls">
+			<button type="submit" class="btn">{$lang.contact_send}</button>
+		</div>
+	</div>
+			
+
+</form>
+

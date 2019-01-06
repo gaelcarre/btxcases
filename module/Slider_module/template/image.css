@@ -1,0 +1,17 @@
+#sliderimage{
+
+}
+#slider {
+    width:70%;
+    height:120px;
+    overflow: hidden;
+    float:left;
+}
+#slidemenu{
+	float:left;
+	width:30%;
+	height:120px;
+}
+#slidemenu li{
+	height:40px;
+}

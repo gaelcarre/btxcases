@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<confs>
+	<conf id="state"><value>dev</value><com>Influe sur la bdd.</com></conf>
+	<conf id="name"><value>crossover</value></conf>
+	<conf id="url"><value>http://crossover.gaelcarre.fr</value></conf>
+	<conf id="default_index"><value>Accueil</value></conf>

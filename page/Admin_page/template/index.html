@@ -1,0 +1,26 @@
+<ul>
+	<li><a href="admin/styles">Gerer les styles de musique</a></li>
+	<li><a href="admin/cds">Gerer les cds</a></li>
+	<li><a href="admin/description">Gerer la description du site</a></li>
+	<li><a href="admin/actus">Gerer les actualités</a></li>
+</ul>
+
+<p>
+	<h1>Visites:</h1>
+	<p>
+		<h2>Total:</h2>
+		<p>{$visite_total.c} visites</p>
+	</p>
+	<p>
+		<h2>Par jours sur la semaine:</h2>
+		<table class="table table-bordered table-striped">
+			{foreach from=$visite_week item=day}
+				<tr>
+					<td>{$day.date_visite|date_format:"%d/%m/%Y"}</td>
+					<td>{$day.c}</td>
+				</tr>
+			{/foreach}
+		</table>
+	</p>
+
+</p>

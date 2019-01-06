@@ -1,0 +1,40 @@
+{if isset($message)}
+	{$message}
+{else}
+<h1>Inscription</h1>
+L'inscription au site est totalement gratuite et rapide.
+<form action="index.php?module=user&page=compte" method="POST" id="compte_form">
+	<div class="champ">
+		<label for="mail">Adresse e-mail*:</label>
+		<input type="mail" name="mail" required>
+	</div>
+	<div class="champ">
+		<label for="password">Mot de passe ( peut être différent de celui du jeu )*:</label>
+		<input type="password" name="password" required>
+	</div>
+	<div class="champ">
+		<label for="level">Niveau dans le jeu:</label>
+		<input type="number" name="level" value="0">
+	</div>
+	<div class="champ">
+		<label for="name">Nom:</label>
+		<input type="text" name="name">
+	</div>
+	<div class="champ">
+		<label for="surname">Prénom:</label>
+		<input type="text" name="surname">
+	</div>
+	<div class="champ">
+		<label for="ville">Ville:</label>
+		<input type="text" name="ville">
+	</div>
+	<div class="champ">
+		<label for="country">Pays:</label>
+		<input type="text" name="country">
+	</div>
+	<div class="champ">
+		<input type="submit">
+	</div>
+</form>
+
+{/if}

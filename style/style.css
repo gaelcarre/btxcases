@@ -1,0 +1,58 @@
+html {
+	height: 100%;
+}
+body
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	height: 100%;
+}
+
+#body_content
+{
+	padding-left:0px;
+	padding-right: 0px;
+	height: 85%;
+}
+
+header
+{
+	height:100%;
+	-webkit-box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.5);
+}
+
+
+header .navbar {
+	padding: 10px 50px;
+}
+
+header #site_description {
+	margin:0% 10%;
+	color:white;
+	font-size:20px;
+}
+
+#content {
+	padding-top: 20px;
+	overflow: auto;
+}
+
+#content h1 {
+	text-decoration: underline;
+}
+footer {height:15%;}
+footer p {
+	text-align:center;
+}
+
+#news_carousel {
+	padding-top:15px;
+}
+.carousel-content {
+    color:black;
+    /* display:flex; */
+    align-items:center;
+    padding: 0px 65px;
+}

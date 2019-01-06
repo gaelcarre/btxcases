@@ -1,0 +1,52 @@
+<script type="text/javascript">
+	$(function(){
+		/*$('input[name="password2"]').keypress(function(){
+			if($(this).val() != $('input[name="password"]').val)
+			{
+				$(this).addClass("error");
+			}
+			else
+				$(this).removeClass("error");
+		});*/
+	$('#register_form').submit(function() {
+		if(!isMail($('#input_mail_register').val()))
+		{
+			$('#error_form_mail').html("Not an e-mail")
+			return false;
+		}	
+		if($('input[name="password"]').val() != $('input[name="password2"]').val())
+		{
+			$('#error_form_password').html("Different password");
+			return false;
+		}
+	
+
+		return true;
+	});
+});
+</script>
+
+
+
+<div class="span12">
+	{if isset($message)}
+		{$message}
+	{else}
+	<h3>Register</h3>
+	Free & Quick
+	{if isset($message_error)}
+		<div class="error">{$message_error}</div>
+	{/if}
+	<form action="index.php?module=user&page=register" method="POST" id="register_form">
+		<input type="email" id="input_mail_register" name="mail" class="input-xlarge" placeholder="Mail Address" required><span class="error" id="error_form_mail"></span><br>
+		<input type="password" name="password" class="input-xlarge" placeholder="Password" required><br>
+		<input type="password" name="password2" class="input-xlarge" placeholder="Confirm your password" required><span class="error" id="error_form_password"></span><br>
+		<input type="text" class="input-xlarge" placeholder="Name" name="name"><br>
+		<input type="text" class="input-xlarge" placeholder="Surname" name="surname"><br>
+		<input type="text" class="input-xlarge" placeholder="City" name="city"><br>
+		<input type="text" class="input-xlarge" placeholder="Country" name="country"><br>
+		<button type="submit" class="btn">Register</button>
+	</form>
+	
+	{/if}
+</div>

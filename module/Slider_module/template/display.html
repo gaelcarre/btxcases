@@ -1,0 +1,13 @@
+<section id="module_news">
+	<h1>Actualités</h1>
+	{foreach from=$news item=aNews}
+		<div class="news">
+			<div class="news_title">
+				{$aNews.news_title}
+			</div>
+			<div class="news_content">
+				{$aNews.news_content}
+			</div>
+		</div>
+	{/foreach}
+</section>

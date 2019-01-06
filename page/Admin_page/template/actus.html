@@ -1,0 +1,57 @@
+<h1>Gestion des actualités</h1>
+<a href="admin">Accueil Admin</a>
+<div class="row-fluid">
+	<div class="span12"><button class="btn" id="ajouterNews">Ajouter une actualité</button></div>
+</div>
+<hr>
+<div class="row-fluid news_items">
+	{foreach from=$actus item=new}
+		<div class="new_item row-fluid" data-id="{$new.news_id}">
+			<div class="span12">
+				<div class="span6 read">
+					<p>{$new.news_content}</p>
+					<p>Article en {$new.News_lang}</p>
+				</div>
+				<div class="span6 edit">
+					<textarea cols="30" rows="10" required>{$new.news_content}</textarea>
+				</div>
+				<div class="span6">
+					<button class="btn btn-primary">Modifier</button>
+					<button class="btn btn-danger">Supprimer</button>
+					<button class="btn btn-success">Valider</button>
+				</div>
+			</div>
+			<div class="span12">
+				<hr>
+			</div>
+		</div>
+	{/foreach}
+	<div id="new_item_news" class="span12">
+		<form action="admin/addActu" method="POST" class="form-horizontal">
+			<div class="control-group">
+				<div class="controls">
+					<input type="text" name="item_title" placeholder="Titre" required />	
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<textarea name="item_content" cols="50" rows="10" required></textarea>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<select name="item_lang">
+						{foreach from=$lang.lang_possible key=k item=v}
+							<option value="{$k}">{$v}</option>
+						{/foreach}
+					</select>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<button class="btn btn-success">Enregistrer</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

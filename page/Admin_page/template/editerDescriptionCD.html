@@ -1,0 +1,25 @@
+<h1>Gestion du CD</h1>
+<a href="admin">Accueil Admin</a><br>
+<a href="admin/cds">Gestion des cds</a>
+<hr>
+
+<form class="form-horizontal" method="post" action="admin/editerDescriptionCD/{$desc->getID()}">
+  <div class="control-group">
+    <label class="control-label" for="inputTitle">Titre:</label>
+    <div class="controls">
+      <input type="text" id="inputTitle" name="inputTitle" placeholder="titre" class="input-xxlarge"
+      value="{$desc->getTitle()}" required>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputContent">Description:</label>
+    <div class="controls">
+      <textarea name="inputContent" id="inputContent" class="input-xxlarge">{$desc->getDescription()}</textarea>  
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <button type="submit" class="btn">Modifier</button>
+    </div>
+  </div>
+</form>

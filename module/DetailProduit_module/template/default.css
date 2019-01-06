@@ -1,0 +1,24 @@
+#mulli_staff{
+	width:720px;
+	margin:0 auto;
+}
+#mulli_staff .item{
+	margin:0 auto;
+	margin:10px;
+}
+
+#mulli_staff .item h3{
+	margin:0;
+	padding:0;
+	width:220px;
+	position:absolute;
+	bottom:5px;
+	text-align:center;
+	background-color: #6D0E0D;
+	color:white;
+	opacity:0.5;
+}
+
+#mulli_staff .item:hover h3{
+	opacity:1;
+}

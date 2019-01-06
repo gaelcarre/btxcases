@@ -1,0 +1,22 @@
+<script type="text/javascript" src="script/jquery.masonry.js"></script>
+<h1>Le Staff</h1>
+<div id="mulli_staff">
+	{foreach from=$datas item=staff}
+		<div class="item">
+			<a class="thumbs" href="#"><img src="http://placehold.it/220x150" width="220" height="150"></a>
+			<h3>{$staff.staff_name}</h3>
+		</div>
+	{/foreach}
+</div>
+
+<script type="text/javascript">
+	var container = $('#mulli_staff');
+	container.masonry({
+		itemSelector: '.item',
+		// set columnWidth a fraction of the container width
+		columnWidth: function( containerWidth ) {
+			return containerWidth / 3;
+		}
+	});
+</script>
+

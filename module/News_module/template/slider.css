@@ -1,0 +1,31 @@
+#slider,#slidemenu{height:126px;}
+#slider, #slider li {
+	overflow:hidden; 
+}
+#slider img{
+    border:none;
+}
+#slider ul, #slider li{
+    position:relative;
+    margin:0;
+    padding:0;
+    list-style:none;
+	display:block;
+}
+#slidemenu li{background-color: white;height:40px;border:1px solid black;}
+#slidemenu li:hover, #slidemenu li.active{background: rgb(250,226,152); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmFlMjk4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjZjliYjAwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y3Y2Y1NiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+background: -moz-linear-gradient(45deg,  rgba(250,226,152,1) 0%, rgba(249,187,0,1) 50%, rgba(247,207,86,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(250,226,152,1)), color-stop(50%,rgba(249,187,0,1)), color-stop(100%,rgba(247,207,86,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(45deg,  rgba(250,226,152,1) 0%,rgba(249,187,0,1) 50%,rgba(247,207,86,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(45deg,  rgba(250,226,152,1) 0%,rgba(249,187,0,1) 50%,rgba(247,207,86,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(45deg,  rgba(250,226,152,1) 0%,rgba(249,187,0,1) 50%,rgba(247,207,86,1) 100%); /* IE10+ */
+background: linear-gradient(45deg,  rgba(250,226,152,1) 0%,rgba(249,187,0,1) 50%,rgba(247,207,86,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fae298', endColorstr='#f7cf56',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+}
+#slidemenu li a{width:100%;display:block;height:40px;text-align:center;color:black; font-size:20px;padding-top:10px; }
+
+#slider{background-color:white;}
+#slider li{padding-left:10px;height:126px;}
+#slider li h2{font-size:30px;color:#FAE298;padding:0;margin:0;}

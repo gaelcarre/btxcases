@@ -1,0 +1,32 @@
+<h1>Gestion des actualités</h1>
+<a href="admin">Accueil Admin</a>
+<div class="row-fluid">
+	<div class="span12"><a class="btn" id="ajouterNews" href="admin/ajouterCD">Ajouter un CD</a></div>
+</div>
+
+<div class="row-fluid">
+	<ul class="nav nav-tabs" id="myTab">
+		{foreach from=$styles item=style}
+			<li ><a href="#{$style->getUrl()}">{$style->getTitle()}</a></li>
+		{/foreach}
+	</ul>
+	<div class="tab-content">
+		{foreach from=$styles item=style}
+			<div class="tab-pane" id="{$style->getUrl()}">
+				<table class="table table-bordered table-striped">
+					{foreach from=$cds item=cd}
+						{if $cd->getCategory() == $style->getId()}
+							<tr>
+								<td>{$cd->getLink()}</td>
+								<td>
+									<a href="/admin/editerCD/{$cd->getId()}" class="icon-pencil"></a>
+								</td>
+							</tr>
+						{/if}
+					{/foreach}
+				</table>
+			</div>
+		{/foreach}
+
+	</div>
+</div>

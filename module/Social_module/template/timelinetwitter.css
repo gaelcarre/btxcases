@@ -1,0 +1,21 @@
+#twitter li{
+	border-bottom:1px solid black;
+	padding:2px;
+}
+#twitter li:hover{
+	background-color:#FAE298;
+}
+#twitter li:last-child{
+	border-bottom:0px;
+}
+#twitter h2{
+	margin:0;
+
+	background-color:#FAE298;
+	color:white;
+	text-align:center;
+}
+#twitter p{
+	margin:0;
+	padding:0;
+}
