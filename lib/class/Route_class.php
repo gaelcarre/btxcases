@@ -65,14 +65,14 @@
 				$temp_url = explode("/",$this->url);
 				print_r($temp_url);print_r("<br>");
 				if(isset($temp_url[0]) and class_exists(ucfirst($temp_url[0])."_page")){
-					print_r($temp_url[0]." page exist<br>");
+					//print_r($temp_url[0]." page exist<br>");
 					$route['page'] = ucfirst($temp_url[0]);
 					if(isset($temp_url[1])){
-						print_r($temp_url[1]." 1 value exist<br>");
+						//print_r($temp_url[1]." 1 value exist<br>");
 						$obj = ucfirst($temp_url[0]."_page");
 						$obj = new $obj();
 						if(method_exists($obj, ucfirst($temp_url[1]))){
-							print_r($temp_url[1]." method exist<br>");
+							//print_r($temp_url[1]." method exist<br>");
 							$route['action'] = ucfirst($temp_url[1]);
 							if(isset($temp_url[2])){
 								//print_r($temp_url[2]." 2 value exist<br>");
@@ -83,10 +83,24 @@
 					}
 					else
 						$route["action"] = "index";
+				} else if(isset($temp_url[0]) and class_exists(ucfirst($temp_url[0])."_module")) {
+					$route['page'] = ucfirst($temp_url[0]);
+					if(isset($temp_url[1])){
+						$obj = ucfirst($temp_url[0]."_module");
+						$obj = new $obj();
+						if(method_exists($obj, ucfirst($temp_url[1]))) {
+							$route['action'] = ucfirst($temp_url[1]);
+							if(isset($temp_url[2])) {
+								$route['param'] = $temp_url[2];
+							}
+						}
+					}
+					else
+					$route["action"] = "index";
 				}
 			}
 
-			//print_r($route);
+			print_r($route);
 			return $route;
 		}
 		//p = page _ s = sspage _ r = param _ m = module _ a = action
