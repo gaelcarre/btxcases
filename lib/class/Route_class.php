@@ -84,10 +84,11 @@
 					else
 						$route["action"] = "index";
 				} else if(isset($temp_url[0]) and class_exists(ucfirst($temp_url[0])."_module")) {
-					print_r($temp_url[0]." page exist<br>");
+					print_r($temp_url);
+					print_r($temp_url[0]." module exist<br>");
 					$route['page'] = ucfirst($temp_url[0]);
 					if(isset($temp_url[1])){
-						print_r($temp_url[1]." 1 value exist<br>");
+						print_r($temp_url[1]." action exist<br>");
 						$obj = ucfirst($temp_url[0]."_module");
 						$obj = new $obj();
 						if(method_exists($obj, ucfirst($temp_url[1]))) {
