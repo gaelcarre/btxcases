@@ -30,7 +30,7 @@
 
 		private function __construct()
 		{
-			
+
 			$this->objUser = new User_module();
 			$this->conf = new Conf();
 
@@ -38,6 +38,7 @@
 
 			if(isset($_GET['url']))
 				$this->currentURL = $_GET['url'];
+
 
 			$this->currentURL = explode(".html",$this->currentURL);
 			$this->currentURL = $this->currentURL[0];
@@ -65,8 +66,8 @@
 			else
 				$this->preparePage();
 
-			
-			
+
+
 		}
 		public function prepareLocalhost()
 		{
@@ -151,7 +152,7 @@
 				if($this->GETmodule != "")
 				{
 					$content = $this->objModule->getContent($this->GETaction,$this->GETparam);
-				}	
+				}
 				else
 				{
 					$content = $this->objPage->getContent($this->GETaction,$this->GETparam);
@@ -170,8 +171,8 @@
 
 				$html = $this->objPage->getContent($this->GETaction,$this->GETparam);
 			}
-					
-					
+
+
 					print_r($html);
 		}
 
@@ -259,5 +260,5 @@
 		{
 			return $this->conf->getConf("email");
 		}
-	} 
+	}
 ?>
