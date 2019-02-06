@@ -91,7 +91,7 @@
 						//print_r($temp_url[1]." action exist<br>");
 						$obj = ucfirst($temp_url[0]."_module");
 						$obj = new $obj();
-						if(method_exists($obj, ucfirst($temp_url[1])._action)) {
+						if(method_exists($obj, ucfirst($temp_url[1]).'_action')) {
 							//print_r($temp_url[1]." method exist<br>");
 							$route['action'] = ucfirst($temp_url[1]);
 							if(isset($temp_url[2])) {
