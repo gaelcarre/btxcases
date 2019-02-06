@@ -186,7 +186,10 @@
 
 		public function loadHead()
 		{
-			return ($this->objPage->getHead($this->GETaction,$this->GETparam));
+				if($this->GETmodule != "")
+					return ($this->objModule->getHead($this->GETaction, $this->GETparam));
+				else
+					return ($this->objPage->getHead($this->GETaction,$this->GETparam));
 		}
 		public function loadHeader()
 		{
