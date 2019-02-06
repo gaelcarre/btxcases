@@ -91,7 +91,7 @@
 			{
 				$module = $this->GETmodule.'_module';
 				$this->objModule = new $module();
-				$exist = method_exists($this->objPage,$this->GETaction.'_action');
+				$exist = method_exists($this->objModule,$this->GETaction.'_action');
 				if(!$exist)
 					$this->objPage = new Error404_page();
 			}
