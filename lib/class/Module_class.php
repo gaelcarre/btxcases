@@ -2,7 +2,6 @@
 	abstract class Module
 	{
 		protected $objSmarty;
-		protected $name;
 
 		public function __construct()
 		{
@@ -19,7 +18,7 @@
 		public function getContent($action='',$param='')
 		{
 
-			
+
 			$act = $action;
 			if($action != '')
 			{
