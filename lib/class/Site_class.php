@@ -195,7 +195,7 @@
 			$this->objSmarty->assign("menu",$this->loadMenu());
 			//print_r($this->objPage->name);
 			//print_r($this->objPage->name == 'Accueil');
-			$this->objSmarty->assign("isIndex", ($this->objPage->name == 'Accueil'));
+			//$this->objSmarty->assign("isIndex", ($this->objPage->name == 'Accueil'));
 			$this->objSmarty->assign("description",
 				$this->getDB()->SelectFirst('Description',"Description_lang='".$_SESSION['lang']."'"));
 			$html = $this->objSmarty->fetch($template);
