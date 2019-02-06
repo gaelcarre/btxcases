@@ -8,7 +8,6 @@
 		private $state;
 		private $conf;
 		private $objDB;
-		private $objModule = null;
 		private $objPage = null;
 		private $objUser = null;
 
@@ -90,8 +89,8 @@
 			if(file_exists($class_path))
 			{
 				$module = $this->GETmodule.'_module';
-				$this->objModule = new $module();
-				$exist = method_exists($this->objModule,$this->GETaction.'_action');
+				$this->objPage = new $module();
+				$exist = method_exists($this->objPage,$this->GETaction.'_action');
 				if(!$exist)
 					$this->objPage = new Error404_page();
 			}
