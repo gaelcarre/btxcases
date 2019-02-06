@@ -12,7 +12,7 @@
 
 		public static function isValid()
 		{
-			
+
 			if(isset($_SESSION['user']) and $_SESSION['user'] == true)
 			{
 				return true;
@@ -35,7 +35,7 @@
 
 		public function Login_action($param = '')
 		{
-			
+
 			if(isset($_POST['login_form_login']))
 			{
 				//print_r($_POST['login_form_login']."<br>");
@@ -45,10 +45,10 @@
 					$_SESSION['user']['user_login'] = true;
 					redirect("/admin");
 				}
-					
+
 
 			}
-				
+
 			$template = __MOD_DIR__.'User_module/template/login.html';
 			$html = $this->objSmarty->fetch($template);
 			return $html;
@@ -85,7 +85,7 @@
 				}
 				else
 					$this->objSmarty->assign('message_error','E-mail already exists');
-				
+
 
 
 			}
@@ -134,7 +134,7 @@
 					}
 
 				}
-				
+
 			}
 		}
 
@@ -142,7 +142,7 @@
 		{
 			if(empty($_SESSION['user']))
 			{
-				
+
 			}
 		}
 

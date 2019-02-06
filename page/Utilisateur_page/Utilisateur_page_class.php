@@ -21,6 +21,7 @@
 		public function Connexion($param = "")
 		{
 			$template = __PAGE_DIR__.'Utilisateur_page/template/connexion.html';
+			
 
 			$html = $this->objSmarty->fetch($template);
 			return $html;
