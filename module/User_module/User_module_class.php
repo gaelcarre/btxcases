@@ -44,7 +44,8 @@
 				//print_r($_POST['login_form_login']."<br>");
 				if($this->checkLog($_POST['login_form_login'], $_POST['login_form_pwd']))
 				{
-					$_SESSION['user']['user_login'] = true;
+					$_SESSION['user']['connected'] = true;
+					$_SESSION['user']['user_login'] = $_POST['login_form_login'];
 					redirect("/");
 				}
 
