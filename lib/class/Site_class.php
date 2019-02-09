@@ -209,7 +209,7 @@
 			$template = __MOD_DIR__.'Default_module/template/menu.html';
 			$lang = new Lang_module();
 			$this->objSmarty->assign("lang_block",$lang->getContent("Default"));
-			print_r($this->getUser());
+			$this->objSmarty->assign_by_ref("user", $this->getUser());
 			$html = $this->objSmarty->fetch($template);
 			return $html;
 		}
