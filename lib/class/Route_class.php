@@ -84,7 +84,7 @@
 					else
 						$route["action"] = "index";
 				} else if(isset($temp_url[0]) and class_exists(ucfirst($temp_url[0])."_module")) {
-					//print_r($temp_url);
+					print_r("else if module".$temp_url);
 					//print_r($temp_url[0]." module exist<br>");
 					$route['module'] = ucfirst($temp_url[0]);
 					if(isset($temp_url[1])){
