@@ -4,7 +4,7 @@
 	<conf id="name"><value>BTXCases</value></conf>
 	<conf id="url"><value>http://btxcases.gaelcarre.fr</value></conf>
 	<conf id="default_index"><value/></conf>
-	<conf id="login"><value>m4d@dminVincent</value></conf>
-	<conf id="pwd"><value>z3zytyVSRY</value></conf>
+	<conf id="login"><value>admin</value></conf>
+	<conf id="pwd"><value>admin</value></conf>
 	<conf id="email"><value>gaelcarre@gmail.com</value></conf>
 </confs>

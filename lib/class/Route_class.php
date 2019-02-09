@@ -63,7 +63,7 @@
 			if(!$find){
 				//check for class
 				$temp_url = explode("/",$this->url);
-				print_r($temp_url);print_r("<br>");
+				//print_r($temp_url);print_r("<br>");
 				if(isset($temp_url[0]) and class_exists(ucfirst($temp_url[0])."_page")){
 					//print_r($temp_url[0]." page exist<br>");
 					$route['page'] = ucfirst($temp_url[0]);
@@ -105,7 +105,6 @@
 				}
 			}
 
-			print_r($route);
 			return $route;
 		}
 		//p = page _ s = sspage _ r = param _ m = module _ a = action

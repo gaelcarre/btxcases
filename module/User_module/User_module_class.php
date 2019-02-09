@@ -36,14 +36,16 @@
 		public function Login_action($param = '')
 		{
 
+			if($this->isValid())
+				redirect("/");
+
 			if(isset($_POST['login_form_login']))
 			{
 				//print_r($_POST['login_form_login']."<br>");
 				if($this->checkLog($_POST['login_form_login'], $_POST['login_form_pwd']))
 				{
-					print_r("pass ok<br>");
 					$_SESSION['user']['user_login'] = true;
-					redirect("/admin");
+					redirect("/");
 				}
 
 
