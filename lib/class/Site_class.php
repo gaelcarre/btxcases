@@ -50,7 +50,7 @@
 
 			$objRoute = new Route($this->state,$this->currentURL,$this->conf->getConf("default_index"));
 			$route = $objRoute->getPage();
-			//print_r($route);print_r("<br>");
+			print_r($route);print_r("<br>");
 			if(isset($route['module']))
 				$this->GETmodule = ucfirst($route['module']);
 			if(isset($route['page']))
