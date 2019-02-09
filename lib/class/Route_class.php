@@ -65,7 +65,7 @@
 				$temp_url = explode("/",$this->url);
 				//print_r($temp_url);print_r("<br>");
 				if(isset($temp_url[0]) and class_exists(ucfirst($temp_url[0])."_page")){
-					print_r($temp_url[0]." page exist<br>");
+					// print_r($temp_url[0]." page exist<br>");
 					$route['page'] = ucfirst($temp_url[0]);
 					if(isset($temp_url[1])){
 						//print_r($temp_url[1]." 1 value exist<br>");
@@ -84,7 +84,7 @@
 					else
 						$route["action"] = "index";
 				} else if(isset($temp_url[0]) and class_exists(ucfirst($temp_url[0])."_module")) {
-					print_r("else if module".$temp_url);
+					// print_r("else if module".$temp_url);
 					//print_r($temp_url[0]." module exist<br>");
 					$route['module'] = ucfirst($temp_url[0]);
 					if(isset($temp_url[1])){
