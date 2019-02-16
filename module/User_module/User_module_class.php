@@ -13,7 +13,7 @@
 		public static function isValid()
 		{
 			print_r($_SESSION);
-			if(isset($_SESSION['user']) and $_SESSION['user'] == true)
+			if(isset($_SESSION['user']) and $_SESSION['user']['connected'] == true)
 			{
 				print_r($_SESSION);
 				return true;
