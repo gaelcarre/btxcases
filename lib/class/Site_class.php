@@ -201,7 +201,7 @@
 			//print_r($this->objPage->name);
 			//print_r($this->objPage->name == 'Accueil');
 			//$this->objSmarty->assign("isIndex", ($this->objPage->name == 'Accueil'));
-			
+
 				//$this->getDB()->SelectFirst('Description',"Description_lang='".$_SESSION['lang']."'"));
 			$html = $this->objSmarty->fetch($template);
 			return $html;
@@ -211,6 +211,7 @@
 			$template = __MOD_DIR__.'Default_module/template/menu.html';
 			$lang = new Lang_module();
 			$this->objSmarty->assign("lang_block",$lang->getContent("Default"));
+			print_r($this->getUser());
 			$this->objSmarty->assignByRef("user", $this->getUser());
 			$html = $this->objSmarty->fetch($template);
 			return $html;
