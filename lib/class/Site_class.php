@@ -213,6 +213,7 @@
 			$this->objSmarty->assign("lang_block",$lang->getContent("Default"));
 			//print_r($this->getUser());
 			$this->objSmarty->assign("logged", $this->getUser()->isValid());
+			print_r("<br>".$this->getUser()->isValid()."<br>")
 			$html = $this->objSmarty->fetch($template);
 			return $html;
 		}
