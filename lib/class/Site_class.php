@@ -212,7 +212,7 @@
 			$lang = new Lang_module();
 			$this->objSmarty->assign("lang_block",$lang->getContent("Default"));
 			//print_r($this->getUser());
-			$this->objSmarty->assign("user", $this->getUser());
+			$this->objSmarty->assign("logged", $this->getUser()->isValid());
 			$html = $this->objSmarty->fetch($template);
 			return $html;
 		}
