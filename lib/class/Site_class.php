@@ -85,13 +85,13 @@
 
 		public function prepareModule()
 		{
-			print_r("preparemodule");
+			//print_r("preparemodule");
 			$class = $this->GETmodule;
 			$class_path = __MOD_DIR__.$class .'_module/'.$class.'_module_class.php';
 			if(file_exists($class_path))
 			{
 				$module = $this->GETmodule.'_module';
-				print_r($module);
+				//print_r($module);
 				$this->objModule = new $module();
 				$exist = method_exists($this->objModule,$this->GETaction.'_action');
 				if(!$exist)
@@ -211,8 +211,8 @@
 			$template = __MOD_DIR__.'Default_module/template/menu.html';
 			$lang = new Lang_module();
 			$this->objSmarty->assign("lang_block",$lang->getContent("Default"));
-			print_r($this->getUser());
-			$this->objSmarty->assignByRef("user", $this->getUser());
+			//print_r($this->getUser());
+			$this->objSmarty->assign("user", $this->getUser());
 			$html = $this->objSmarty->fetch($template);
 			return $html;
 		}
