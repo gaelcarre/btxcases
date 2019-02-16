@@ -15,6 +15,7 @@
 
 			if(isset($_SESSION['user']) and $_SESSION['user'] == true)
 			{
+				print_r($_SESSION);
 				return true;
 			}
 			else
@@ -101,7 +102,7 @@
 		public function Logout_action($param = '')
 		{
 			$_SESSION['user'] = array();
-			//redirect("/");
+			redirect("/");
 		}
 
 		public function Account_action($param = '')
