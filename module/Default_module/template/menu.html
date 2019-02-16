@@ -6,7 +6,6 @@
         <a class="py-2 d-none d-md-inline-block" href="#">Commande${$user->isValid()}</a>
 				{if $user->isValid()}
 				<a class="py-2 d-none d-md-inline-block" href="user/login">Se connecter</a>
-				<a class="py-2 d-none d-md-inline-block" href="user/logout">Se deconnecter</a>
 				{else}
 				{$user->getLogin()}
 				<a class="py-2 d-none d-md-inline-block" href="user/logout">Se deconnecter</a>

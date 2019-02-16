@@ -101,7 +101,7 @@
 		public function Logout_action($param = '')
 		{
 			$_SESSION['user'] = array();
-			redirect("/");
+			//redirect("/");
 		}
 
 		public function Account_action($param = '')
